@@ -1,7 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
+/* 头部 */
 .head{
     margin: 0 auto;
     width: 1250px;
@@ -50,4 +53,27 @@
    margin-top:18px;
    margin-left:30px;
 }
+
+/* 底部 */
+.stern{
+    width: 1250px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #505050;
+    padding-top: 30px;
+    position: relative;
+}
+.stern img{
+    width: 100px;
+    margin-left: 50px;
+    float: left;
+    overflow: hidden;
+}
+.ku{
+    position: absolute;
+    top: 80px;
+    left: 160px;
+}
+
+
 
