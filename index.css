@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    margin: 0 auto;
+    width: 1250px;
+    height: 100px;
+    position: relative;
+    border-bottom: 2px solid rgb(207,194,194);
+}
+.head img{
+    width: 100px;
+    height: 50px;
+    float: left;
+    padding-left:100px;
+    padding-top: 20px;
+}
+.page{
+    list-style: none;
+}
+.page li{
+    float: left;
+    line-height: 100px;
+    margin-left: 80px;
+}
+.page li:hover{
+    color:coral;
+}
+.seek{
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.seek li{
+    list-style: none;
+}
+.seek img{
+    width: 20px;
+    height: 20px;
+}
+.seek button{
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(226, 137, 21);
+    background-color: white;
+    color:coral;
+   margin-top:18px;
+   margin-left:30px;
+}
+
