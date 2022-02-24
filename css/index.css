@@ -112,7 +112,7 @@
 }
 /* 展示大图 */
 .title{
-    background: url(./img/icon/original.jpg) -275px 0px no-repeat;
+    background: url(../img/icon/original.jpg) -275px 0px no-repeat;
     width: 1250px;
     height: 300px;
     margin:0 auto;

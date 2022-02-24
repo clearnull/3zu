@@ -1,0 +1,117 @@
+.kuwanone{
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+
+.kuwantwo{
+    text-align: center;
+    line-height: 145px;
+    font-size: 44px;
+}
+.zuii_{
+   
+    text-align: center;
+}
+.zuixin{
+    display: inline-block;
+    width: 130px;
+    height: 53px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 53px;
+    /* border: 1px solid rebeccapurple; */
+    /* border-bottom: 2px solid orangered; */
+    /* position: relative;
+    left: 458px;
+    top: 0px; */
+    /* color: orangered; */
+    margin: 0 auto;
+    
+}
+.zuire{
+    display: inline-block;
+    width: 130px;
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    /* border: 1px solid rebeccapurple; */
+    /* position: relative;
+    left: 489px;
+    top: 0px; */
+    font-size: 18px;
+
+}
+/* .xuanran{
+    width: 100%;
+    height: 1000px;
+    background-color: paleturquoise;
+} */
+
+#out {
+  width: 100%;
+  background-color: rgb(247,247,247);
+  
+}
+#out>ul{
+  margin: 20px auto;
+  width: 1200px;
+ display: flex;
+list-style: none;
+flex-wrap: wrap;
+}
+#out>ul>li{
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#out>ul>li>a{
+  text-decoration: none;
+  color: black;
+}
+#out>ul>li>a>img{
+  width: 250px;
+  height: 180px;
+}
+
+/* .xuanran>ul>li>a>p>.zan{
+  display: inline-block;
+  width: 20px;
+  color: grey;
+  font-size: 14px;
+  padding-left: 30px;
+  background: url(./img/xin.png) no-repeat 10px 3px;
+  margin-left: 130px;
+}
+.xuanran>ul>li>a>p>.look{
+  color: grey;
+  font-size: 14px;
+  padding-left: 30px;
+  background: url(./img/reply.png) no-repeat 10px 3px;
+  margin-left: 10px;
+} */
+.zan{
+  display: inline-block;
+  width: 20px;
+  background: url(./img/xin.png) no-repeat 2px 3px;
+   padding-left: 17px;
+   margin-top: 10px;
+    margin-left: 140px;
+   font-size: 13px;
+   color: grey;
+   }
+ .look{
+  display: inline-block;
+   width: 20px;
+   margin-top: 10px;
+    background: url(./img/reply.png) no-repeat 2px 3px;
+   padding-left: 17px;
+   font-size: 13px;
+    color: grey;
+  }
+  .find_p>ul>.change{
+    color:#FA5431;
+    border-bottom:#FA5431 solid;
+}

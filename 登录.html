@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/登录.css">
+</head>
+<body>
+    <div id="denglujs">
+        <div class="one">
+                  <div class="two">
+                      <p class="jiguoone">极果账号登录</p>
+                     
+                <input type="text" class="jiguotwo" placeholder="手机号" id="user"><span id="span1"></span><br>
+            <input type="password" class="jiguotwo" placeholder="密码" id="psd"><span id="span2"></span><br>
+            <p class="jiguo_"><input type="checkbox" class="jiguofour" >下次自动登录
+            <button class="juguothree">登录</button></p>
+            <p  class="jiguofive"> <span>注册新账号</span> 
+               <span class="spantwo">忘记密码?</span></p>     
+                  </div>
+
+                  <div class="three">
+                      <p class="shejiao">社交网络账号登录</p>
+                      <p class="shejiaoone"><img src="./img/icon/微信.png" alt=""></p>
+                      <span><img src="./img/icon/取消.png" alt="" id="quxiao" onclick="ft()"></span>
+                      <ul >
+                          <li class="weibo"><img src="./img/icon/微博.png" alt="">微博</li>
+                          <li class="shouji"><img src="./img/icon/qq.png" alt="">QQ</li>
+                      </ul>
+                  </div>
+        </div>
+</body>
+</html>
+<script>
+    
+    var aaa= document.getElementById('denglujs');
+    console.log(aaa);
+    function ft(){
+        aaa.style.display='none';
+       //  aaa.style.zIndex='-1'
+    }
+    function fn(){
+      aaa.style.display='block';
+    }
+   </script>
+   
+   
+   
+   <script>
+        var user=document.getElementById('user')
+        var span1=document.getElementById('span1');
+        user.onfocus=function(){
+             span1.innerHTML='请输入'
+         }
+         user.onblur=function(){
+           reg=/^\d{6,12}$/;
+           if(user.value==''){
+               span1.innerHTML='用户名不能为空'
+               return false
+           }else if(!reg.test(user.value)){
+               span1.innerHTML='长度不在范围内'
+               return false
+           }else{
+               span1.innerHTML='账户名正确'
+               return true
+           }
+         }
+   
+         var psd=document.getElementById('psd')
+         var span2=document.getElementById('span2')
+   
+         psd.onfocus=function(){
+             span2.innerHTML='请输入密码'
+         }
+         psd.onblur=function(){
+           // var reg=/^\w{6,12}&/
+       var reg1=/[^0-9]/
+       var reg2=/[^a-zA-Z]/
+             if(psd.value==''){
+                 span2.innerHTML='密码不能为空'
+             }
+           //   else if(!reg.test(psd.value)){
+           //       span2.innerHTML='长度不在范围内'
+           //   }
+             else if(!reg1.test(psd.value)){
+                 span2.innerHTML='不能全是数字'
+             }else if(!reg2.test(psd.value)){
+                 span2.innerHTML='不能全是字母'
+             }else{
+                 span2.innerHTML='密码格式正确'
+             }
+         }
+   </script>

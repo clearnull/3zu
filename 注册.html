@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/jquery-3.6.min.js"></script>
-    <link rel="stylesheet" href="./css/inde.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="./js/index.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/注册.css">
 </head>
-
 <body>
-    <!-- 页面部分 -->
-    <div>
+     <!-- 页面部分 -->
+     <div>
         <!-- title -->
         <!-- logo -->
         <div class="head">
@@ -34,57 +28,40 @@
                 <li>
                     <img src="./img/icon/search.png" alt="">
                 </li>
-                <a href="./注册.html"><button>注册</button></a>
-                        <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+                <button>
+                    注册
+                </button>
+                <button>
+                    登录
+                </button>
             </ul>
         </div>
-        <!-- 展示大图 -->
-        <div class="title">
-            <div class="title_page animate__animated animate__flipInX">
-                <div>幻响小贝HiFi2.1音箱</div>
-                <div>
-                    <span>126人申请</span>
-                    <span>￥599</span>
-                    <span>20台</span>
-                </div>
-                <div>申请时间剩余：13天5小时37分钟</div>
-                <button>立即申请</button>
+
+        <div class="register-div">
+            <div class="register-box">
+                <div class="register-conter">&nbsp;&nbsp;&nbsp;注册极果</div>
+                <form action="">
+                    <input type="text" placeholder="请输入登录手机号" id="phone">
+                    <br>
+                    <input type="text" placeholder="请输入图片校验码" id="imgCode">
+                    <br>
+                    <div><img src="./img/image/imgCode.jpg" alt=""></div>
+                    <br>
+                    <input type="text" placeholder="请输入4位数字验证码" id="num">
+                    <div class="auth-code" id="getNumCode">获取验证码</div>
+                    <br>
+                    <input type="text" placeholder="请输入用户名" id="userName">
+                    <br>
+                    <input type="text" placeholder="请输入新密码" id="psw1">
+                    <br>
+                    <input type="text" placeholder="确认新密码"  id="psw2">
+                    <button id="promptlyRegister">立即注册</button>
+
+                </form>
             </div>
         </div>
 
-        <!-- 热门试用 -->
-
-
-
-
-        <!-- 热门试用 轮播图-->
-        <div class="try">热门试用</div>
-        <div id="fat">
-            <div id="out"></div>
-        </div>
-        <script src="./js/template-web.js"></script>
-        <script>
-            ajax("http://192.168.31.110:3000/useing/public", "mo", "out")
-        </script>
-        <script id="mo" type="text/html">
-        <span class="left"><</span>
-        <span class="right">></span>
-        <ul class="ul_">
-            {{each value}}
-            <li class="lis">
-                <img src="{{$value.img}}">
-                <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.num}}台</span>
-                <p>{{$value.apply}}<span>申请</span></p>
-                <p>剩余时间2天</p>
-            </li>
-            {{/each}}
-        </ul>
-        </script>
-
-
-
+        
         <!-- 底部 -->
         <footer class="stern">
             <img src="./img/image/code.png" alt="">
@@ -132,5 +109,4 @@
         </footer>
     </div>
 </body>
-
 </html>

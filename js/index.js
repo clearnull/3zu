@@ -15,11 +15,15 @@ function ajax(url, a, id) {
         }
     }
 }
-
 $(function () {
     $('.find_p>ul>li').click(function () {
         var index = $(this).index()
         $('.find_p>ul>li').eq(index).addClass('change').siblings().removeClass('change')
         $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
+        if (index == 0) {
+            ajax("http://192.168.31.110:3000/guid/new", "mo", "out")
+        } else if (index == 1) {
+            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
+        }
     })
 })

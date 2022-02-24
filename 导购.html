@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/导购.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/template-web.js"></script>
     <script src="./js/jquery-3.6.min.js"></script>
-    <link rel="stylesheet" href="./css/inde.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="./js/index.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -35,55 +34,44 @@
                     <img src="./img/icon/search.png" alt="">
                 </li>
                 <a href="./注册.html"><button>注册</button></a>
-                        <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+                <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
             </ul>
         </div>
-        <!-- 展示大图 -->
-        <div class="title">
-            <div class="title_page animate__animated animate__flipInX">
-                <div>幻响小贝HiFi2.1音箱</div>
-                <div>
-                    <span>126人申请</span>
-                    <span>￥599</span>
-                    <span>20台</span>
-                </div>
-                <div>申请时间剩余：13天5小时37分钟</div>
-                <button>立即申请</button>
-            </div>
+
+
+        <div class="kuwanone">
+            <p class="kuwantwo">导购清单</p>
+        </div>
+        <div class="find_p">
+            <ul class="zuii_">
+                <li class="zuixin change">最新</li>
+                <li class="zuire">最热</li>
+            </ul>
         </div>
 
-        <!-- 热门试用 -->
 
-
-
-
-        <!-- 热门试用 轮播图-->
-        <div class="try">热门试用</div>
-        <div id="fat">
+        <div class="all" style="display: block;">
             <div id="out"></div>
         </div>
-        <script src="./js/template-web.js"></script>
         <script>
-            ajax("http://192.168.31.110:3000/useing/public", "mo", "out")
+            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
         </script>
         <script id="mo" type="text/html">
-        <span class="left"><</span>
-        <span class="right">></span>
-        <ul class="ul_">
+        <ul class="uls">
             {{each value}}
-            <li class="lis">
-                <img src="{{$value.img}}">
-                <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.num}}台</span>
-                <p>{{$value.apply}}<span>申请</span></p>
-                <p>剩余时间2天</p>
+            <li>
+                <a href="">
+                    <img src="{{$value.img}}" alt="">
+                    <p>{{$value.text}}</p>
+                    <p>
+                        <span class="zan">{{$value.num}}</span>
+                        <span class="look">{{$value.apply}}</span>
+                    </p>
+                </a>
             </li>
             {{/each}}
         </ul>
         </script>
-
-
 
         <!-- 底部 -->
         <footer class="stern">
@@ -130,7 +118,7 @@
             </ul>
             <div class="buttom">© 2022 极果版权所有</div>
         </footer>
-    </div>
+
 </body>
 
 </html>

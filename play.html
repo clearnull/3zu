@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="./play.css">
-    <script src="../js/template-web.js"></script>
-    <script src="../js/jquery-3.6.min.js"></script>
-    <script src="../js/index.js"></script>
+    <link rel="stylesheet" href="./css/play.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./js/jquery-3.6.min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <!-- title -->
         <!-- logo -->
         <div class="head">
-            <img src="../img/image/logonew.png" alt="">
+            <img src="./img/image/logonew.png" alt="">
             <!-- 标题左边 -->
             <ul class="page">
                 <li>首页</li>
@@ -30,7 +30,7 @@
             <!-- 标题右边 -->
             <ul class="seek">
                 <li>
-                    <img src="../img/icon/search.png" alt="">
+                    <img src="./img/icon/search.png" alt="">
                 </li>
                 <button>
                     注册
@@ -46,7 +46,7 @@
             <ul>
                 <li class="change">最新</li>
                 <li>最热</li>
-                <li>品类</li>
+                <li><a href="">品类</a></li>
             </ul>
         </div>
         <div class="all" style="display: block;">
@@ -68,50 +68,12 @@
                 {{/each}}
             </ul>
         </script>
-        <div class="all" style="display: none;">
-            <div id="out2"></div>
-        </div>
-        <script>
-            ajax("http://192.168.31.110:3000/useing/master", "mo", "out2")
-        </script>
-        <script id="mo" type="text/html">
-            <ul>
-                {{each value}}
-                <li>
-                    <img src="{{$value.img}}" alt="">
-                    <p>{{$value.text}}</p>
-                    <span>{{$value.price}}</span>
-                    <span>{{$value.like}}</span>
-                    <span>{{$value.words}}</span>
-                </li>
-                {{/each}}
-            </ul>
-        </script>
-        <div class="all" style="display: none;">
-            <div id="out2"></div>
-        </div>
-        <script>
-            ajax("http://192.168.31.110:3000//play/category", "mo", "out2")
-        </script>
-        <script id="mo" type="text/html">
-                    <ul>
-                        {{each value}}
-                        <li>
-                            <img src="{{$value.img}}" alt="">
-                            <p>{{$value.text}}</p>
-                            <span>{{$value.price}}</span>
-                            <span>{{$value.like}}</span>
-                            <span>{{$value.words}}</span>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </script>
         <!-- 底部 -->
         <footer class="stern">
-            <img src="../img/image/code.png" alt="">
+            <img src="./img/image/code.png" alt="">
             <ul>
                 <li class="ku">
-                    <img src="../img/image/logoImg.jpg" alt="">
+                    <img src="./img/image/logoImg.jpg" alt="">
                     <a>全球酷玩试用导购平台</a>
                     <a>酷·新奇·好玩·品质</a>
                     <a>微信添加“JguoJguo”</a>
