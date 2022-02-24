@@ -1,0 +1,72 @@
+.d2{
+    width: 700px;
+    height:350px;
+    border: 1px solid;
+    border-bottom: 2px solid #f1600c;
+}
+.d3{
+    width: 450px;
+    height:280px;
+    border-right: 1px solid;
+}
+.f{
+    position: relative;
+    top:75px;
+    left: 35px;
+}
+.you{
+    width:260px;
+    height: 30px;
+    border: 1px solid;
+}
+.zi{
+    position:absolute;
+    top: 85px;
+    left:5px;
+}
+.zi>.pass{
+    position: absolute;
+    left: 218px;
+}
+
+.bot input{
+    width:100px;
+    height: 35px;
+    position: absolute;
+    bottom:-39px;
+    left: 175px;
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+}
+.f #xing{
+    position: absolute;
+    bottom: 10px;
+    left;: 10px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social{
+    position: relative;
+    left:506px;
+    top:-285px;
+}
+.social .code_{
+  margin:6px -28px;
+    
+}
+
