@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: "黑体";
 }
 /* 头部 */
 .head{
@@ -150,56 +151,4 @@
     overflow: auto;
     position:relative;
 }
-#out{
-    width: 3250px;
-}
-#out>ul>li{
-    float: left;
-    width: 200px;
-    margin:0 25px;
-}
-#out img{
-    width: 200px;
-}
-#out ul{
-    font-size: 14px;
-    font-family: "黑体";
-    text-align: center;
-}
-.out_one{
-    height: 35px;
-}
-#out>ul>li>span{
-    display: inline-block;
-    border:solid 1px #F75F4D;
-    border-radius: 5px;
-    color:#F75F4D;
-    padding:2px 5px;
-    font-size: 12px;
-    margin:3px 0;
-}
-#out>ul>li>p:nth-child(5){
-    color:#F75F4D;
-}
-#out>ul>li>p:nth-child(6){
-    color:#F75F4D;
-}
-#out>ul>li>p>span{
-    color:#000;
-}
-.try{
-    font-family: "黑体";
-    width: 950px;
-    margin: 20px auto;
-}
-.left,.right{
-    font-size: 70px;
-    position:absolute;
-    top:20px;
-}
-.left{
-    left: 0;
-}
-.right{
-    right: 0;
-}
+
