@@ -1,5 +1,5 @@
 .about {
-    margin: 50px auto;
+  position:relative;
 }
 .wrap {
     width: 1000px;
@@ -131,3 +131,8 @@ dl dd {
     height: 0;
     visibility: hidden;
 }
+
+.stern{
+    position: relative;
+    top:2500px;
+} 
