@@ -1,0 +1,58 @@
+.find{
+    width: max-content;
+    font-size: 50px;
+    margin:20px auto;
+}
+.find_p>ul{
+    width: max-content;
+    margin:0 auto;
+    overflow: hidden;
+    padding-bottom:20px;
+}
+.find_p>ul>li{
+    font-size: 20px;
+    color:gray;
+    float:left;
+    width: 140px;
+    text-align: center;
+}
+#out{
+    width: 100%;
+    overflow: hidden;
+    background:rgb(235, 233, 233);
+}
+#out ul{
+    width: 1250px;
+    margin:0 auto;
+}
+#out li{
+    width: 300px;
+    height: 220px;
+    margin:20px 50px;
+    float:left;
+}
+#out img{
+    width: 300px;
+}
+#out2{
+    width: 100%;
+    overflow: hidden;
+    background:rgb(235, 233, 233);
+}
+#out2 ul{
+    width: 1250px;
+    margin:0 auto;
+}
+#out2 li{
+    width: 300px;
+    height: 220px;
+    margin:20px 50px;
+    float:left;
+}
+#out2 img{
+    width: 300px;
+}
+.find_p>ul>.change{
+    color:#FA5431;
+    border-bottom:#FA5431 solid;
+}

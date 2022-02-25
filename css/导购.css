@@ -1,6 +1,5 @@
 .kuwanone{
     width: 100%;
-    height: 200px;
     margin: 0 auto;
     /* background-color: aqua; */
 }
@@ -22,11 +21,11 @@
     text-align: center;
     line-height: 53px;
     /* border: 1px solid rebeccapurple; */
-    border-bottom: 2px solid orangered;
+    /* border-bottom: 2px solid orangered; */
     /* position: relative;
     left: 458px;
     top: 0px; */
-    color: orangered;
+    /* color: orangered; */
     margin: 0 auto;
     
 }
@@ -49,34 +48,32 @@
     background-color: paleturquoise;
 } */
 
-.xuanran {
-  width: 1200px;
-  height: 1200px;
+#out {
+  width: 100%;
   background-color: rgb(247,247,247);
-  margin: 0 auto;
-
+  
 }
-.xuanran>ul{
+#out>ul{
+  margin: 20px auto;
   width: 1200px;
-  height: 1000px;
  display: flex;
 list-style: none;
-justify-content: center;
 flex-wrap: wrap;
 }
-.xuanran>ul>li{
+#out>ul>li{
   width: 250px;
   height: 250px;
   background-color: white;
   margin-left: 20px;
   margin-top: 20px;
 }
-.xuanran>ul>li>a{
+#out>ul>li>a{
   text-decoration: none;
   color: black;
 }
-.xuanran>ul>li>a>img{
+#out>ul>li>a>img{
   width: 250px;
+  height: 180px;
 }
 
 /* .xuanran>ul>li>a>p>.zan{
@@ -114,3 +111,7 @@ flex-wrap: wrap;
    font-size: 13px;
     color: grey;
   }
+  .find_p>ul>.change{
+    color:#FA5431;
+    border-bottom:#FA5431 solid;
+}

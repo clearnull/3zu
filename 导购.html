@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/导购.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./js/jquery-3.6.min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
+
 <body>
-      <!-- 页面部分 -->
-      <div>
+    <!-- 页面部分 -->
+    <div>
         <!-- title -->
         <!-- logo -->
         <div class="head">
@@ -29,66 +34,47 @@
                     <img src="./img/icon/search.png" alt="">
                 </li>
                 <a href="./注册.html"><button>注册</button></a>
-                        <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+                <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
             </ul>
         </div>
 
 
         <div class="kuwanone">
             <p class="kuwantwo">导购清单</p>
-   </div>
-   <div class="zuii_">
-    <span class="zuixin"><a href="#">最新</a> </span>
-    <span class="zuire"><a href="./css/导购清单-最热.html">最热</a> </span>
-   </div>
+        </div>
+        <div class="find_p">
+            <ul class="zuii_">
+                <li class="zuixin change">最新</li>
+                <li class="zuire">最热</li>
+            </ul>
+        </div>
+
+
+        <div class="all" style="display: block;">
+            <div id="out"></div>
+        </div>
+        <script>
+            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
+        </script>
+        <script id="mo" type="text/html">
+        <ul class="uls">
+            {{each value}}
+            <li>
+                <a href="">
+                    <img src="{{$value.img}}" alt="">
+                    <p>{{$value.text}}</p>
+                    <p>
+                        <span class="zan">{{$value.num}}</span>
+                        <span class="look">{{$value.apply}}</span>
+                    </p>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        </script>
 
 
 
-
-   <div class="xuanran">
-       <ul class="uls">
-           <li>
-               <a href="#">
-                   <img src = "./img/image/g1.jpg">
-                   <p>花万元把蜗居秒变"豪宅"？这12件家具就能帮你办到</p>
-                   <p>
-                       <span class="zan">3</span>
-                       <span class="look">3</span>
-                   </p>
-               </a>
-           </li>
-           <li>
-               <a href="#">
-                   <img src = "./img/image/g2.jpg">
-                   <p>到底有没有完美的iphone手机 配件，答案都在这里</p>
-                   <p>
-                       <span class="zan">3</span>
-                       <span class="look">3</span>
-                   </p>
-               </a>
-           </li>
-           <li>
-               <a href="#">
-                   <img src = "./img/image/g3.jpg">
-                   <p>2016，这8支钢笔够你装逼一整年</p>
-                   <p>
-                       <span class="zan">3</span>
-                       <span class="look">3</span>
-                   </p>
-               </a>
-           </li>
-           <li>
-               <a href="#">
-                   <img src = "./img/image/g4.jpg">
-                   <p>他用12年找一把完美 剃须刀给你2万字终极购买指南</p>
-                   <p>
-                       <span class="zan">3</span>
-                       <span class="look">3</span>
-                   </p>
-               </a>
-           </li>
-       </ul>
-   </div>
 <!-- 底部 -->
 <footer class="stern">
     <img src="./img/image/code.png" alt="">
@@ -134,5 +120,8 @@
     </ul>
     <div class="buttom">© 2022 极果版权所有</div>
 </footer>
+
+       
 </body>
+
 </html>
