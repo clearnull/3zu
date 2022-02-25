@@ -149,10 +149,11 @@
 #fat{
     width: 1000px;
     margin:10px auto;
-    overflow: auto;
+    overflow: hidden;
     position:relative;
 }
-
-
-
-
+.fe{
+    width: 1000px;
+    margin:10px auto;
+    position:relative;
+}

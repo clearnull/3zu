@@ -45,24 +45,30 @@
     position: relative;
   }
   .see1 .see_left {
-    width: 600px;
-    height: 2500px;
+    width: 640px;
+    height: 450px;
     position: absolute;
     left: 100px;
+    background:url("../img/image/bg1.jpg") no-repeat;
   }
   .see1 .see_left .baogaoul {
     list-style: none;
     width: 100%;
   }
-  .see1 .see_left .baogaoul li {
-    width: 600px;
-    height: 450px;
-    margin: 20px auto;
+  .see1 .see_left .baogaoul li>.ching{
+    width: 640px;
+    height: 100px;
     float: left;
-    position: relative;
+    position: absolute;
+    z-index: 1;
+    bottom:73px;
+    background:rgba(161, 161, 161,.8);
   }
   .see1 .see_left .baogaoul li a {
     text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top:20px;
   }
   .see1 .see_left .baogaoul li a img {
     width: 600px;
@@ -71,7 +77,7 @@
     color: black;
   }
   .see1 .see_left .baogaoul li a .see_bottom {
-    width: 100%;
+    width: 600px;
     height: 30px;
     float: left;
     position: absolute;
@@ -111,4 +117,30 @@
   .see1 .see_right p {
     color: gray;
   }
-
+  .see_bottom{
+    color:#000;
+  }
+.see_bottom span:nth-child(2){
+  color:coral;
+}
+.see_bottom span:nth-child(4){
+  float:right;
+}
+.see_bottom span:nth-child(5){
+  float:right;
+  margin-right: 10px;
+}
+.baogaoul{
+  z-index: 2;
+}
+.baogaoul>li>p{
+  position:absolute;
+  bottom:0;
+  border:1px solid gray;
+  color:gray;
+  width: 640px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius:5px;
+}

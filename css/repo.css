@@ -1,0 +1,109 @@
+.see_right {
+    width: 250px;
+    float:right;
+}
+.see_right .tiyan {
+    height: 30px;
+    line-height: 30px;
+    margin: 20px auto;
+    padding: 0 10px;
+    font-size: 20px;
+    border-left: 3px solid red;
+}
+.see_right img {
+    width: 250px;
+}
+.see_right h2 {
+margin: 10px auto;
+}
+.see_right p {
+color: gray;
+}
+.father{
+    width: 100%;
+    background: rgb(226, 226, 226);
+}
+.see{
+    width: 1000px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.see_left{
+    margin-top:20px;
+    float:left;
+    position:relative;
+}
+.see_left ul{
+    margin-right: 20px;
+}
+.see_left ul>li{
+    position:relative;
+}
+.see_left .ching{
+    width: 640px;
+    height: 450px;
+    background:url("../img/image/bg1.jpg") no-repeat;
+}
+.see_left .pin2{
+    width: 640px;
+    height: 450px;
+    background:url("../img/image/bg4.jpg") no-repeat;
+}
+.see_left .pin3{
+    width: 640px;
+    height: 450px;
+    background:url("../img/image/bg5.jpg") no-repeat;
+}
+.see_left .pin4{
+    width: 640px;
+    height: 450px;
+    background:url("../img/image/bg6.jpg") no-repeat;
+}
+.see_left .pin5{
+    width: 640px;
+    height: 450px;
+    background:url("../img/image/bg8.jpg") no-repeat 0px 18px ;
+}
+.see_left .ching a{
+    display: inline-block;
+    width: 640px;
+    background:rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom:73px;
+    height: 100px;
+    color:#000;
+}
+.baogaoul>li>p{
+    position:absolute;
+    bottom:10px;
+    border:1px solid gray;
+    color:gray;
+    width: 640px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius:5px;
+}
+.see_bottom {
+    width: 600px;
+    position:absolute;
+    bottom:10px;
+    left:20px;
+}
+.see_bottom span:nth-child(2){
+    color:coral;
+}
+.see_bottom span:nth-child(5){
+    position:absolute;
+    right: 0;
+}
+.see_bottom span:nth-child(4){
+    position:absolute;
+    right: 30px;
+}
+.see_left .ching>a>p{
+    margin:20px;
+}
+.change{
+    color:#FA5431;
+}
