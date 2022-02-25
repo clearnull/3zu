@@ -27,7 +27,30 @@ $(function () {
         }
     })
 })
-// $(function () {
-//     var widths = $('#fat').css('width')
-//     console.log(widths);
-// })
+
+
+$(function () {
+    $('.find_r>ul>li').click(function () {
+        var index = $(this).index()
+        $('.find_r>ul>li').removeClass('change')
+        $('.find_r>ul>li').eq(index).addClass('change')
+        $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
+        if (index == 1) {
+            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
+        } else if (index == 0) {
+            ajax("http://192.168.31.110:3000/report/new", "mo", "out")
+        }
+    })
+    $('.find_t>ul>li').click(function () {
+        var index = $(this).index()
+        $('.find_t>ul>li').eq(index).addClass('change').siblings().removeClass('change')
+        $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
+        if (index == 1 || index == 3) {
+            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
+            $('out').eq(index).css('display', 'block').siblings('#out').css('display', 'none')
+        } else if (index == 0 || index == 2) {
+            ajax("http://192.168.31.110:3000/report/new", "mo", "out")
+            $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
+        }
+    })
+})

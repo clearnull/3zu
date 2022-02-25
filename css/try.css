@@ -1,0 +1,89 @@
+.find{
+    width: max-content;
+    font-size: 50px;
+    margin:20px auto;
+}
+.find_r>ul{
+    width: max-content;
+    margin:0 auto;
+    overflow: hidden;
+    padding-bottom:20px;
+}
+.find_r>ul>li{
+    font-size: 20px;
+    color:gray;
+    float:left;
+    width: 140px;
+    text-align: center;
+}
+.find_t>ul>.change{
+    color:#000000;
+}
+.find_t>ul{
+    width: max-content;
+    margin:0 auto;
+    overflow: hidden;
+    padding-bottom:20px;
+}
+.find_t>ul>li{
+    font-size: 20px;
+    color:gray;
+    float:left;
+    width: 140px;
+    text-align: center;
+}
+#out{
+    width: 100%;
+    overflow: hidden;
+    background:rgb(235, 233, 233);
+}
+#out ul,#out2 ul{
+    width: 1250px;
+    height: 780px;
+    overflow: hidden;
+    margin:0 auto;
+}
+#out li,#out2 li{
+    width: 200px;
+    height: 220px;
+    margin:20px 50px;
+    float:left;
+    text-align: center;
+}
+#out img,#out2 img{
+    width: 200px;
+}
+#out>ul>li>span,#out2>ul>li>span{
+    display: inline-block;
+    border-radius: 5px;
+    padding:2px 5px;
+    font-size: 12px;
+    margin:3px 0;
+}
+#out>ul>li>p>span,#out2>ul>li>p>span{
+    color:#000;
+}
+#out>ul>li>span{
+    border:solid 1px #A2D491;
+    color:#A2D491;
+}
+#out>ul>li>p:nth-child(5),#out2>ul>li>p:nth-child(5){
+    color:#A2D491;
+}
+#out>ul>li>p:nth-child(6),#out2>ul>li>p:nth-child(6){
+    color:#A2D491;
+}
+#out2>ul>li>span{
+    border:solid 1px #F75F4D;
+    color:#F75F4D;
+}
+#out2>ul>li>p:nth-child(5){
+    color:#F75F4D;
+}
+#out2>ul>li>p:nth-child(6){
+    color:#F75F4D;
+}
+.find_r>ul>.change{
+    color:#FA5431;
+    border-bottom:#FA5431 solid;
+}

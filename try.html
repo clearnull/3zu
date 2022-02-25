@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-3.6.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/try.css">
+</head>
+
+<body>
+    <!-- title -->
+    <!-- logo -->
+    <div class="head">
+        <img src="./img/image/logonew.png" alt="">
+        <!-- 标题左边 -->
+        <ul class="page">
+            <li>首页</li>
+            <li>酷玩</li>
+            <li>导购</li>
+            <li>试用</li>
+            <li>报告</li>
+        </ul>
+        <!-- 标题右边 -->
+        <ul class="seek">
+            <li>
+                <img src="./img/icon/search.png" alt="">
+            </li>
+            <a href="./注册.html"><button>注册</button></a>
+            <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+        </ul>
+    </div>
+    <!-- 免费试用 -->
+    <div class="find">免费试用</div>
+    <div class="find_r">
+        <ul>
+            <li class="change">大众试用</li>
+            <li>体验师专享</li>
+        </ul>
+    </div>
+    <div class="find_t">
+        <ul>
+            <li class="change">全部</li>
+            <li>申请中</li>
+            <li>试用中</li>
+            <li>已结束</li>
+        </ul>
+    </div>
+    <div id="out"></div>
+    <script src="./js/template-web.js"></script>
+    <script>
+        ajax("http://192.168.31.110:3000/useing/public", "mo", "out")
+    </script>
+    <script id="mo" type="text/html">
+            <ul class="ul_">
+                {{each value}}
+                <li class="lis">
+                    <img src="{{$value.img}}">
+                    <p class="out_one">{{$value.text}}</p>
+                    <span>{{$value.totalnum}}</span>
+                    <span>{{$value.num}}台</span>
+                    <p>{{$value.apply}}<span>申请</span></p>
+                    <p>剩余时间2天</p>
+                </li>
+                {{/each}}
+            </ul>
+            </script>
+    <div id="out2" style="display: none;"></div>
+    <script src="./js/template-web.js"></script>
+    <script>
+        ajax("http://192.168.31.110:3000/useing/public", "mo", "out2")
+    </script>
+    <!-- 底部 -->
+    <footer class="stern">
+        <img src="./img/image/code.png" alt="">
+        <ul>
+            <li class="ku">
+                <img src="./img/image/logoImg.jpg" alt="">
+                <a>全球酷玩试用导购平台</a>
+                <a>酷·新奇·好玩·品质</a>
+                <a>微信添加“JguoJguo”</a>
+                <a>获取我们的服务。</a>
+            </li>
+            <li>
+                <p>免费试用</p>
+                <div><a href="./帮助与合作模块/帮助.html">试用流程</a></div>
+                <a>如何提高成功率</a>
+            </li>
+            <li>
+                <p>友情链接</p>
+                <div><a href="" class="str_a">智东西</a><a href="">WEIBUSI</a></div>
+                <div><a href="" class="str_a">搜狐IT</a><a href="">腾讯科技</a></div>
+                <div><a href="" class="str_a">搜狐数码</a><a href="">凤凰科技</a></div>
+                <div><a href="" class="str_a">凤凰数码</a><a href="">PConline</a></div>
+                <div><a href="" class="str_a">泡泡网</a><a href="">3W咖啡</a></div>
+                <div><a href="" class="str_a">ZUK社区</a><a href="">亿觅emie</a></div>
+                <div><a href="" class="str_a">极客公园</a><a href="">易迅易启玩</a></div>
+                <div><a href="">果库</a></div>
+            </li>
+            <li>
+                <p>购买攻略</p>
+                <a href="">美亚海淘教程</a>
+                <a href="">日亚海淘教程</a>
+                <a href="">海淘转运攻略</a>
+                <a href="">kickstarter 众筹购买攻略</a>
+                <a href="">indiegogogo 众筹购买攻略</a>
+            </li>
+            <li>
+                <p>厂商合作</p>
+                <a href="./帮助与合作模块/合作.html">关于极果</a>
+                <a href="">联系我们</a>
+                <a href="">商务合作：BD@jiguo.com</a>
+                <a href="">CEO邮箱 ：CEO@jiguo.com</a>
+            </li>
+        </ul>
+        <div class="buttom">© 2022 极果版权所有</div>
+    </footer>
+</body>
+
+</html>
