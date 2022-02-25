@@ -7,7 +7,7 @@
     width: max-content;
     margin:0 auto;
     overflow: hidden;
-    padding-bottom:20px;
+    /* padding-bottom:20px; */
 }
 .find_p>ul>li{
     font-size: 20px;
