@@ -1,14 +1,15 @@
 #out{
-    width: 3250px;
+    width: 6500px;
     overflow: hidden;
 }
 #out>ul>li{
     float: left;
-    width: 200px;
+    width: 300px;
     margin:0 25px;
 }
 #out img,#ot img,#ott img,#otq img{
-    width: 200px;
+    width: 250px;
+    height: 150px;
 }
 #out ul{
     overflow: hidden;
@@ -46,6 +47,7 @@
     font-size: 70px;
     position:absolute;
     top:20px;
+    z-index: 99;
 }
 .left{
     left: 0;
@@ -58,9 +60,12 @@
     width: 1000px;
     margin:0 auto;
 }
+#otq{
+    height:650px;
+}
 #ot>ul>li,#ott>ul>li,#otq>ul>li{
     float: left;
-    height: 200px;
+    height: 220px;
     margin:0 25px;
     overflow: hidden;
     width: 200px;
@@ -78,7 +83,7 @@
 }
 .use{
     width: 100%;
-    height: 220px;
+    height: 215px;
     overflow: hidden;
     padding:10px 0;
     background:#ffffff;

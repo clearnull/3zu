@@ -24,6 +24,8 @@ $(function () {
             ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
         } else if (index == 1) {
             ajax("http://192.168.31.110:3000/report/new", "mo", "out")
+        } else if (index == 2) {
+            $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
         }
     })
 })
@@ -64,7 +66,7 @@ window.addEventListener('load', function () {
     function fn() {
         time = setInterval(function () {
             index++
-            if (index > 3) {
+            if (index > 5) {
                 index = 0
                 all.scrollLeft = 0
             }
@@ -76,7 +78,7 @@ window.addEventListener('load', function () {
         var step = 0
         var stepmax = 20;
         var star = all.scrollLeft //0
-        var end = li_[0].scrollWidth * 5 * index
+        var end = li_[0].scrollWidth * 3.5 * index
         var everystep = (end - star) / stepmax
         time1 = setInterval(function () {
             step++
