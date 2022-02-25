@@ -64,6 +64,7 @@
     padding-top: 30px;
     position: relative;
     font-family: "黑体";
+    bottom: 0px;
 }
 .stern>img{
     position: absolute;
