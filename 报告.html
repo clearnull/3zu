@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/baogao.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./js/jquery-3.6.min.js"></script>
 </head>
 <body>
      <!-- 页面部分 -->
@@ -52,9 +54,10 @@
                         <img src="" alt="">
                          <p></p>
                          <div class="see_bottom">
-                             <span class="ess_b">324</span>
-                                  <span class="ess_l">111</span>
-                             <span class="ess_r">222</span>                 
+                            <span class="ess_b">222</span>
+                            <span class="ess_l">444</span>
+                            <span class="ess_r">555</span>                 
+                                   
                          </div>  
                      </a>
 
@@ -132,64 +135,3 @@
     </footer>
 </body>
 </html>
-
-<script>
-    function baogaozuixin(){
-        var ajax_ = new XMLHttpRequest()||new ActiveXObject("Microsoft.XMLHTTP");
-        ajax_.open('get','./报告-最新.json',true);
-        ajax_.send();
-        ajax_.onreadystatechange = function(){
-            if(ajax_.readyState==4){
-                if(ajax_.status ==200){
-                    var data = JSON.parse(ajax_.responseText);
-                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
-                    document.getElementsByClassName('baogaoul')[0].innerHTML =  tmpText(data);
-                }
-            }
-        }
-    }
-    baogaozuixin();
-    function baogaozuire(){
-        var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
-        ajax_.open('get','./报告-最热.json',true);
-        ajax_.send();
-        ajax_.onreadystatechange = function(){
-            if(ajax_.readyState==4){
-                if(ajax_.status ==200){
-                    var data = JSON.parse(ajax_.responseText);
-                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
-                    document.getElementsByClassName('baogaoul')[0].innerHTML =  tmpText(data);
-                }
-            }
-        }  
-    }
-</script>
-<script src="../3zu/js/doT.min.js"></script>
-<script id="moban" type="text/x-dot-template">
-    <!-- 6、展示数据 -->
-    {{~it:value:baogao}}
-        <li>
-            <a href="#">
-                 <img src="{{=value.img}}" alt="">
-               <p>{{=value.text}}</p>
-               <div class="see_bottom">
-                   <span class="ess_b">{{=value.name}}</span>
-                    <span class="ess_l">{{=value.like}}</span>
-                    <span class="ess_r">{{=value.words}}</span>
-               </div>
-            </a>           
-        </li>
-    {{~}}
-</script>
-<script>
-    
-    var aaa= document.getElementById('denglujs');
-    console.log(aaa);
-    function ft(){
-        aaa.style.display='none';
-       //  aaa.style.zIndex='-1'
-    }
-    function fn(){
-      aaa.style.display='block';
-    }
-   </script>

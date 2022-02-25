@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-3.6.min.js"></script>
     <link rel="stylesheet" href="./css/inde.css">
@@ -37,7 +40,7 @@
                 </li>
 
                 <a href="./注册.html"><button>注册</button></a>
-                        <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+                <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
             </ul>
         </div>
         <!-- 展示大图 -->
@@ -53,24 +56,20 @@
                 <button>立即申请</button>
             </div>
         </div>
-
-        <!-- 热门试用 -->
-
-
-
-
         <!-- 热门试用 轮播图-->
-        <div class="try">热门试用</div>
+        <div class="tr">
+            <div class="try">热门试用</div>
+        </div>
         <div id="fat">
             <div id="out"></div>
+            <span class="left"><< /span>
+            <span class="right">></span>
         </div>
         <script src="./js/template-web.js"></script>
         <script>
             ajax("http://192.168.31.110:3000/useing/public", "mo", "out")
         </script>
         <script id="mo" type="text/html">
-        <span class="left"><</span>
-        <span class="right">></span>
         <ul class="ul_">
             {{each value}}
             <li class="lis">
@@ -84,6 +83,7 @@
             {{/each}}
         </ul>
         </script>
+<<<<<<< HEAD
 
 
 
@@ -134,6 +134,133 @@
         </footer>
     </div>
 
+=======
+        <!-- 报告精选 -->
+        <div class="user">
+            <div class="tr">
+                <div class="try">报告精选</div>
+                <div class="try2">查看更多 <span class="fa fa-align-justify"></span></div>
+            </div>
+            <div id="ot"></div>
+            <script src="./js/template-web.js"></script>
+            <script>
+                ajax("http://192.168.31.110:3000/useing/master", "moe", "ot")
+            </script>
+            <script id="moe" type="text/html">
+        <span class="left"><</span>
+        <span class="right">></span>
+        <ul class="ul_">
+            {{each value}}
+            <li class="lis">
+                <img src="{{$value.img}}">
+                <p class="out_one">{{$value.text}}</p>
+                <span>{{$value.totalnum}}</span>
+                <span>{{$value.like}}</span>
+                <span>{{$value.words}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+        </div>
+        <!-- 导购精选 -->
+        <div class="use">
+            <div class="tr">
+                <div class="try">导购精选</div>
+                <div class="try2">查看更多 <span class="fa fa-align-justify"></span></div>
+            </div>
+            <div id="ott"></div>
+            <script src="./js/template-web.js"></script>
+            <script>
+                ajax("http://192.168.31.110:3000/useing/master", "moee", "ott")
+            </script>
+            <script id="moee" type="text/html">
+        <span class="left"><</span>
+        <span class="right">></span>
+        <ul class="ul_">
+            {{each value}}
+            <li class="lis">
+                <img src="{{$value.img}}">
+                <p class="out_one">{{$value.text}}</p>
+                <span>{{$value.like}}</span>
+                <span>{{$value.words}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+        </div>
+        <!-- 发现酷玩 -->
+        <div class="user">
+            <div class="tr">
+                <div class="try">发现酷玩</div>
+                <div class="try2">查看更多 <span class="fa fa-align-justify"></span></div>
+            </div>
+            <div id="otq"></div>
+            <script src="./js/template-web.js"></script>
+            <script>
+                ajax("http://192.168.31.110:3000/useing/master", "moew", "otq")
+            </script>
+            <script id="moew" type="text/html">
+        <span class="left"><</span>
+        <span class="right">></span>
+        <ul class="ul_">
+            {{each value}}
+            <li class="lis">
+                <img src="{{$value.img}}">
+                <p class="out_one">{{$value.text}}</p>
+                <span>{{$value.totalnum}}</span>
+                <span>{{$value.like}}</span>
+                <span>{{$value.words}}</span>
+            </li>
+            {{/each}}
+        </ul>
+        </div>
+        </script>
+            <!-- 底部 -->
+            <footer class="stern">
+                <img src="./img/image/code.png" alt="">
+                <ul>
+                    <li class="ku">
+                        <img src="./img/image/logoImg.jpg" alt="">
+                        <a>全球酷玩试用导购平台</a>
+                        <a>酷·新奇·好玩·品质</a>
+                        <a>微信添加“JguoJguo”</a>
+                        <a>获取我们的服务。</a>
+                    </li>
+                    <li>
+                        <p>免费试用</p>
+                        <div><a href="./帮助与合作模块/帮助.html">试用流程</a></div>
+                        <a>如何提高成功率</a>
+                    </li>
+                    <li>
+                        <p>友情链接</p>
+                        <div><a href="" class="str_a">智东西</a><a href="">WEIBUSI</a></div>
+                        <div><a href="" class="str_a">搜狐IT</a><a href="">腾讯科技</a></div>
+                        <div><a href="" class="str_a">搜狐数码</a><a href="">凤凰科技</a></div>
+                        <div><a href="" class="str_a">凤凰数码</a><a href="">PConline</a></div>
+                        <div><a href="" class="str_a">泡泡网</a><a href="">3W咖啡</a></div>
+                        <div><a href="" class="str_a">ZUK社区</a><a href="">亿觅emie</a></div>
+                        <div><a href="" class="str_a">极客公园</a><a href="">易迅易启玩</a></div>
+                        <div><a href="">果库</a></div>
+                    </li>
+                    <li>
+                        <p>购买攻略</p>
+                        <a href="">美亚海淘教程</a>
+                        <a href="">日亚海淘教程</a>
+                        <a href="">海淘转运攻略</a>
+                        <a href="">kickstarter 众筹购买攻略</a>
+                        <a href="">indiegogogo 众筹购买攻略</a>
+                    </li>
+                    <li>
+                        <p>厂商合作</p>
+                        <a href="./帮助与合作模块/合作.html">关于极果</a>
+                        <a href="">联系我们</a>
+                        <a href="">商务合作：BD@jiguo.com</a>
+                        <a href="">CEO邮箱 ：CEO@jiguo.com</a>
+                    </li>
+                </ul>
+                <div class="buttom">© 2022 极果版权所有</div>
+            </footer>
+>>>>>>> 4f102b649e2cd1e3b1ee3948fe5f345a1e499736
 </body>
 
 </html>
