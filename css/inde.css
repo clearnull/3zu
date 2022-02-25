@@ -7,10 +7,11 @@
     width: 200px;
     margin:0 25px;
 }
-#out img{
+#out img,#ot img,#ott img,#otq img{
     width: 200px;
 }
 #out ul{
+    overflow: hidden;
     font-size: 14px;
     font-family: "黑体";
     text-align: center;
@@ -38,8 +39,8 @@
 }
 .try{
     font-family: "黑体";
-    width: 950px;
-    margin: 20px auto;
+    padding:20px 0;
+    float:left;
 }
 .left,.right{
     font-size: 70px;
@@ -51,4 +52,39 @@
 }
 .right{
     right: 0;
+}
+#ot,#ott,#otq{
+    overflow: hidden;
+    width: 1000px;
+    margin:0 auto;
+}
+#ot>ul>li,#ott>ul>li,#otq>ul>li{
+    float: left;
+    height: 200px;
+    margin:0 25px;
+    overflow: hidden;
+    width: 200px;
+    font-size: 13px;
+}
+.tr{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.user{
+    width: 100%;
+    padding:10px 0;
+    background:#F7F7F7;
+}
+.use{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    padding:10px 0;
+    background:#ffffff;
+}
+.try2{
+    padding:20px 0;
+    float:right;
+    color:#F75F4D;
 }
