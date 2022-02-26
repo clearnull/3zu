@@ -20,5 +20,18 @@ $(function () {
         var index = $(this).index()
         $('.find_p>ul>li').eq(index).addClass('change').siblings().removeClass('change')
         $('.all').eq(index).css('display', 'block').siblings('.all').css('display', 'none')
+        if (index == 0) {
+            ajax("http://192.168.31.110:3000/play/new", "mo", "out")
+        } else if (index == 1) {
+            ajax("http://192.168.31.110:3000/play/hot", "mo", "out")
+        }
+    })
+})
+
+//加载更多
+$(function () {
+    $('.gengduo').on('click', function () {
+        $('.uls').css('height', '1250')
+        $('.gengduo').css('display', 'none')
     })
 })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,47 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/登录.css">
 </head>
+
 <body>
 
-    
-    <div id="denglujs">
-        <div class="one">
-                  <div class="two">
-                      <p class="jiguoone">极果账号登录</p>
-                     
-                <input type="text" class="jiguotwo" placeholder="手机号" id="user"><span id="span1"></span><br>
-            <input type="password" class="jiguotwo" placeholder="密码" id="psd"><span id="span2"></span><br>
-            <p class="jiguo_"><input type="checkbox" class="jiguofour" >下次自动登录
-            <button class="juguothree">登录</button></p>
-            <p  class="jiguofive"> <span>注册新账号</span> 
-               <span class="spantwo">忘记密码?</span></p>     
-                  </div>
 
-                  <div class="three">
-                      <p class="shejiao">社交网络账号登录</p>
-                      <p class="shejiaoone"><img src="./img/icon/微信.png" alt=""></p>
-                      <span><img src="./img/icon/取消.png" alt="" id="quxiao" onclick="ft()"></span>
-                      <ul >
-                          <li class="weibo"><img src="./img/icon/微博.png" alt="">微博</li>
-                          <li class="shouji"><img src="./img/icon/qq.png" alt="">QQ</li>
-                      </ul>
-                  </div>
+    <div id="denglujs">
+        <div class="one" id="ont">
+            <div class="two">
+                <p class="jiguoone">极果账号登录</p>
+
+                <input type="text" class="jiguotwo" placeholder="手机号" id="user"><span id="span1"></span><br>
+                <input type="password" class="jiguotwo" placeholder="密码" id="psd"><span id="span2"></span><br>
+                <p class="jiguo_"><input type="checkbox" class="jiguofour">下次自动登录
+                    <button class="juguothree">登录</button>
+                </p>
+                <p class="jiguofive"> <span>注册新账号</span>
+                    <span class="spantwo">忘记密码?</span>
+                </p>
+            </div>
+
+            <div class="three">
+                <p class="shejiao">社交网络账号登录</p>
+                <p class="shejiaoone"><img src="./img/icon/微信.png" alt=""></p>
+                <span><img src="./img/icon/取消.png" alt="" id="quxiao" onclick="ft()"></span>
+                <ul>
+                    <li class="weibo"><img src="./img/icon/微博.png" alt="">微博</li>
+                    <li class="shouji"><img src="./img/icon/qq.png" alt="">QQ</li>
+                </ul>
+            </div>
         </div>
 </body>
+
 </html>
 <script>
-    
-    var deng= document.getElementById('denglujs');
+
+    var deng = document.getElementById('denglujs');
     console.log(deng);
-    function ft(){
-        deng.style.display='none';
-    
+    function ft() {
+        deng.className = '';
+
     }
-    function fn(){
-      deng.style.display='block';
+    function fn() {
+        deng.style.display = 'block';
     }
-   </script>
-   
+</script>

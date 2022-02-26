@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     font-family: "黑体";
+    user-select: none;
 }
 /* 头部 */
 .head{
@@ -157,4 +158,9 @@
     width: 1000px;
     margin:10px auto;
     position:relative;
+}
+.gengduo{
+    width: 100px;
+    margin:0 auto;
+    color:#F75F4D;
 }
