@@ -89,32 +89,6 @@
                 {{/each}}
             </ul>
             </script>
-    <div id="outq" style="display: none;"></div>
-    <script src="./js/template-web.js"></script>
-    <script>
-        ajax("http://192.168.31.110:3000/useing/public", "mo1", "outq")
-    </script>
-    <script id="mo1" type="text/html">
-                <ul class="ul_">
-                    {{each value}}
-                    <li class="lis">
-                        <img src="{{$value.img}}">
-                        <p class="out_one">{{$value.text}}</p>
-                        <!-- 申请中 -->
-                        {{if $value.endTime}}
-                        <span class="orcolor bcolor">{{$value.totalnum}}</span>
-                        <span class="orcolor bcolor">{{$value.num}}台</span>
-                        <p class="orcolor">{{$value.apply}}<span class="black">申请</span></p>
-                        <p class="orcolor">剩余时间2天</p>
-                        {{/if}}
-                    </li>
-                    {{/each}}
-                </ul>
-            </script>
-    </script>
-    <script>
-        ajax("http://192.168.31.110:3000/useing/public", "mo", "out2")
-    </script>
     <!-- 底部 -->
     <footer class="stern">
         <img src="./img/image/code.png" alt="">

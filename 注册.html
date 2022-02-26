@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/注册.css">
+    <script src="./js/zhuce.js"></script>
 </head>
+
 <body>
-     <!-- 页面部分 -->
-     <div>
+    <!-- 页面部分 -->
+    <div>
         <!-- title -->
         <!-- logo -->
         <div class="head">
@@ -41,28 +44,29 @@
             <div class="register-box">
                 <div class="register-conter">&nbsp;&nbsp;&nbsp;注册极果</div>
                 <form action="">
-                    <input type="text" placeholder="请输入登录手机号" id="phone">
+                    <input type="text" placeholder="请输入登录手机号" id="phone" pattern="^1[3578]\d{9}$">
+                    <span></span>
                     <br>
                     <input type="text" placeholder="请输入图片校验码" id="imgCode">
                     <br>
                     <div><img src="./img/image/imgCode.jpg" alt=""></div>
                     <br>
-                    <input type="text" placeholder="请输入4位数字验证码" id="num">
+                    <input type="text" placeholder="请输入4位数字验证码" id="num" pattern="^\w{6,10}$">
                     <div class="auth-code" id="getNumCode">获取验证码</div>
                     <br>
                     <input type="text" placeholder="请输入用户名" id="userName">
+                    <span></span>
                     <br>
-                    <input type="text" placeholder="请输入新密码" id="psw1">
+                    <input type="text" placeholder="请输入新密码" id="psw1" pattern="^\w{6,10}$">
                     <br>
-                    <input type="text" placeholder="确认新密码"  id="psw2">
+                    <input type="text" placeholder="确认新密码" id="psw2" pattern="^\w{6,10}$">
                     <button id="promptlyRegister">立即注册</button>
-
                 </form>
             </div>
-        </div> 
+        </div>
 
 
-        
+
         <!-- 底部 -->
         <footer class="stern">
             <img src="./img/image/code.png" alt="">
@@ -110,7 +114,5 @@
         </footer>
     </div>
 </body>
+
 </html>
-
-
-   
