@@ -61,7 +61,7 @@
     margin:0 auto;
 }
 #otq{
-    height:730px;
+    height:480px;
 }
 #ot>ul>li,#ott>ul>li,#otq>ul>li{
     float: left;
@@ -114,15 +114,8 @@
 i{
     color:#000;
 }
-#more{
+.gengduo{
     width: 100px;
     margin:0 auto;
-    position:relative;
-}
-#more span{
-    position:absolute;
-    left:-10px;
-}
-.fa-spinner{
-    display: none;
+    color:#F75F4D;
 }

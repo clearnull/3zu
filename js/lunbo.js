@@ -30,4 +30,15 @@ window.addEventListener('load', function () {
             all.scrollLeft = star
         }, 15)
     }
+    var left = document.getElementsByClassName('left')[0]
+    var right = document.getElementsByClassName('right')[0]
+    var width_ = all.scrollLeft
+    left.onclick = function () {
+        clearInterval(time1)
+        all.scrollLeft = li_[0].scrollWidth * 3.5
+    }
+    right.onclick = function () {
+        clearInterval(time1)
+        all.scrollLeft = -(li_[0].scrollWidth * 3.5)
+    }
 })
