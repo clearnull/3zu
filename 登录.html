@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/登录.css">
 </head>
 <body>
+
+    
     <div id="denglujs">
         <div class="one">
                   <div class="two">
@@ -35,61 +37,14 @@
 </html>
 <script>
     
-    var aaa= document.getElementById('denglujs');
-    console.log(aaa);
+    var deng= document.getElementById('denglujs');
+    console.log(deng);
     function ft(){
-        aaa.style.display='none';
-       //  aaa.style.zIndex='-1'
+        deng.style.display='none';
+    
     }
     function fn(){
-      aaa.style.display='block';
+      deng.style.display='block';
     }
    </script>
    
-   
-   
-   <script>
-        var user=document.getElementById('user')
-        var span1=document.getElementById('span1');
-        user.onfocus=function(){
-             span1.innerHTML='请输入'
-         }
-         user.onblur=function(){
-           reg=/^\d{6,12}$/;
-           if(user.value==''){
-               span1.innerHTML='用户名不能为空'
-               return false
-           }else if(!reg.test(user.value)){
-               span1.innerHTML='长度不在范围内'
-               return false
-           }else{
-               span1.innerHTML='账户名正确'
-               return true
-           }
-         }
-   
-         var psd=document.getElementById('psd')
-         var span2=document.getElementById('span2')
-   
-         psd.onfocus=function(){
-             span2.innerHTML='请输入密码'
-         }
-         psd.onblur=function(){
-           // var reg=/^\w{6,12}&/
-       var reg1=/[^0-9]/
-       var reg2=/[^a-zA-Z]/
-             if(psd.value==''){
-                 span2.innerHTML='密码不能为空'
-             }
-           //   else if(!reg.test(psd.value)){
-           //       span2.innerHTML='长度不在范围内'
-           //   }
-             else if(!reg1.test(psd.value)){
-                 span2.innerHTML='不能全是数字'
-             }else if(!reg2.test(psd.value)){
-                 span2.innerHTML='不能全是字母'
-             }else{
-                 span2.innerHTML='密码格式正确'
-             }
-         }
-   </script>

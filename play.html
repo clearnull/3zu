@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/play.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/template-web.js"></script>
@@ -14,6 +18,10 @@
     <link rel="stylesheet" href="./css/back.css">
     <script src="./js/back.js"></script>
     
+
+    <link rel="stylesheet" href="./css/playpin.css">
+    <script src="./js/play.js"></script>
+
 </head>
 
 <body>
@@ -27,7 +35,7 @@
                 <li><a href="./index.html">首页</a></li>
                 <li><a href="./play.html">酷玩</a></li>
                 <li><a href="./导购.html">导购</a></li>
-                <li><a href="./">试用</a></li>
+                <li><a href="./try.html">试用</a></li>
                 <li><a href="./report.html">报告</a></li>
             </ul>
             <!-- 标题右边 -->
@@ -49,7 +57,7 @@
             <ul>
                 <li class="change">最新</li>
                 <li>最热</li>
-                <li><a href="">品类</a></li>
+                <li>品类</li>
             </ul>
         </div>
         <!-- 最新 -->
@@ -60,14 +68,50 @@
             ajax("http://192.168.31.110:3000/play/new", "mo", "out")
         </script>
         <script id="mo" type="text/html">
-            <ul>
+            <ul class="uls">
                 {{each value}}
                     <li>
                         <img src="{{$value[1].img}}" alt="">
                         <p>{{$value[1].text}}</p>
                         <span>{{$value[1].price}}</span>
-                        <span>{{$value[1].like}}</span>
-                        <span>{{$value[1].words}}</span>
+                        <span class="fa fa-comment-o">{{$value[1].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[1].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[2].img}}" alt="">
+                        <p>{{$value[2].text}}</p>
+                        <span>{{$value[2].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[2].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[2].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[3].img}}" alt="">
+                        <p>{{$value[3].text}}</p>
+                        <span>{{$value[3].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[3].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[3].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[4].img}}" alt="">
+                        <p>{{$value[4].text}}</p>
+                        <span>{{$value[4].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[4].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[4].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[5].img}}" alt="">
+                        <p>{{$value[5].text}}</p>
+                        <span>{{$value[5].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[5].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[5].words}}</span>
                     </li>
                 {{/each}}
             </ul>
@@ -77,41 +121,288 @@
             <div id="out2"></div>
         </div>
         <script>
-            ajax("http://192.168.31.110:3000/play/hot", "mo2", "out2")
+            ajax("http://192.168.31.110:3000/play/new", "mo", "out2")
         </script>
-        <script id="mo2" type="text/html">
-            <ul>
-                {{each value}}
-                    <li>
-                        <img src="{{$value[2].img}}" alt="">
-                        <p>{{$value[2].text}}</p>
-                        <span>{{$value[2].price}}</span>
-                        <span>{{$value[2].like}}</span>
-                        <span>{{$value[2].words}}</span>
-                    </li>
-                {{/each}}
-            </ul>
-        </script>
-        <!-- 品类 -->
-        <!-- <div class="all" style="display: block;">
-            <div id="out3"></div>
-        </div>
-        <script>
-            ajax("http://192.168.31.110:3000/play/hot", "m", "out3")
-        </script>
-        <script id="m" type="text/html">
-                    <ul>
+        <script id="mo" type="text/html">
+                    <ul class="uls">
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[2].img}}" alt="">
+                            <p>{{$value[2].text}}</p>
+                            <span>{{$value[2].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[2].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[2].words}}</span>
+                        </li>
+                        {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[5].img}}" alt="">
+                            <p>{{$value[5].text}}</p>
+                            <span>{{$value[5].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[5].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[5].words}}</span>
+                        </li>
+                        {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[1].img}}" alt="">
+                            <p>{{$value[1].text}}</p>
+                            <span>{{$value[1].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[1].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[1].words}}</span>
+                        </li>
+                        {{/each}}
                         {{each value}}
                             <li>
-                                <img src="{{$value[0].img}}" alt="">
-                                <p>{{$value[1].text}}</p>
-                                <span>{{$value[1].price}}</span>
-                                <span>{{$value[1].like}}</span>
-                                <span>{{$value[1].words}}</span>
+                                <img src="{{$value[4].img}}" alt="">
+                                <p>{{$value[4].text}}</p>
+                                <span>{{$value[4].price}}</span>
+                                <span class="fa fa-comment-o">{{$value[4].like}}</span>
+                                <span class="fa fa-heart-o">{{$value[4].words}}</span>
                             </li>
                         {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[3].img}}" alt="">
+                            <p>{{$value[3].text}}</p>
+                            <span>{{$value[3].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[3].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[3].words}}</span>
+                        </li>
+                        {{/each}}
                     </ul>
-                </script> -->
+                </script>
+        <!-- 品类 -->
+        <div class="all" style="display: none;">
+            <div class="out3">
+                <p>生活</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_1.png" alt="">
+                        <span>空气净化器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_2.png" alt="">
+                        <span>吸尘器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_3.png" alt="">
+                        <span>扫地机器人(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_4.png" alt="">
+                        <span>电风扇(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_5.png" alt="">
+                        <span>净水壶(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_6.png" alt="">
+                        <span>电饭煲(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_7.png" alt="">
+                        <span>咖啡机(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_8.png" alt="">
+                        <span>原汁机(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>个人护理</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_9.png" alt="">
+                        <span>电动牙刷(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_10.png" alt="">
+                        <span>剃须刀(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_11.png" alt="">
+                        <span>按摩器(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>健康</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_1.png" alt="">
+                        <span>扫地机器人(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_2.png" alt="">
+                        <span>吸尘器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_3.png" alt="">
+                        <span>电风扇(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>智能穿戴</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_9.png" alt="">
+                        <span>电动牙刷(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_4.png" alt="">
+                        <span>电风扇(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_5.png" alt="">
+                        <span>原汁机(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_6.png" alt="">
+                        <span>干燥机(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_7.png" alt="">
+                        <span>咖啡机(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_8.png" alt="">
+                        <span>净水壶(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>出行</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_11.png" alt="">
+                        <span>按摩器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_2.png" alt="">
+                        <span>吸尘器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_9.png" alt="">
+                        <span>电动牙刷(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>运动户外</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_10.png" alt="">
+                        <span>剃须刀(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_8.png" alt="">
+                        <span>原汁机(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_5.png" alt="">
+                        <span>干燥机(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>摄影</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_3.png" alt="">
+                        <span>电风扇(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_2.png" alt="">
+                        <span>吸尘器(21)</span>
+                    </li>
+                    <li>
+                        <img src="./img/image/cat_9.png" alt="">
+                        <span>电动牙刷(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+            <div class="out3">
+                <p>手机</p>
+                <ul class="ul1">
+                    <li>
+                        <img src="./img/image/cat_11.png" alt="">
+                        <span>按摩器(21)</span>
+                    </li>
+                    <li class="xian"></li>
+                </ul>
+                <ul class="ul2">
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                    <li>电视(21)</li>
+                </ul>
+            </div>
+        </div>
         <!-- 底部 -->
         <footer class="stern">
             <img src="./img/image/code.png" alt="">

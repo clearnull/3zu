@@ -13,6 +13,8 @@
     <script src="./js/jquery-3.6.min.js"></script>
     <link rel="stylesheet" href="./css/inde.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./js/lunbo.js"></script>
+    <script src="./js/more.js"></script>
     <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/back.css">
     <script src="./js/back.js"></script>
@@ -29,10 +31,10 @@
             <img src="./img/image/logonew.png" alt="">
             <!-- 标题左边 -->
             <ul class="page">
-                <li><a href="">首页</a></li>
+                <li><a href="./index.html">首页</a></li>
                 <li><a href="./play.html">酷玩</a></li>
                 <li><a href="./导购.html">导购</a></li>
-                <li><a href="./">试用</a></li>
+                <li><a href="./try.html">试用</a></li>
                 <li><a href="./report.html">报告</a></li>
             </ul>
             <!-- 标题右边 -->
@@ -62,17 +64,12 @@
         <div class="tr">
             <div class="try">热门试用</div>
         </div>
-
-        <div id="fat">
-            <div id="out"></div>
-
         <div class="fe">
-
             <span class="left"><</span>
-            <span class="right">></span>
-            <div id="fat">
-                <div id="out"></div>
-            </div>
+                    <span class="right">></span>
+                    <div id="fat">
+                        <div id="out"></div>
+                    </div>
         </div>
         <script src="./js/template-web.js"></script>
         <script>
@@ -81,18 +78,17 @@
         <script id="mo" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lis" id="lis">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
                 <span>{{$value.totalnum}}</span>
                 <span>{{$value.num}}台</span>
-                <p>{{$value.apply}}<span>申请</span></p>
+                <p>{{$value.apply}}<i>申请</i></p>
                 <p>剩余时间2天</p>
             </li>
             {{/each}}
         </ul>
         </script>
-
         <!-- 报告精选 -->
         <div class="user">
             <div class="tr">
@@ -102,17 +98,16 @@
             <div id="ot"></div>
             <script src="./js/template-web.js"></script>
             <script>
-                ajax("http://192.168.31.110:3000/useing/master", "moe", "ot")
+                ajax("http://192.168.31.110:3000/guid/new", "moe", "ot")
             </script>
             <script id="moe" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lise">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
+                <span class="fa fa-comment-o">{{$value.words}}</span>
+                <span class="fa fa-thumbs-o-up">{{$value.like}}</span>
             </li>
             {{/each}}
         </ul>
@@ -127,17 +122,17 @@
             <div id="ott"></div>
             <script src="./js/template-web.js"></script>
             <script>
-                ajax("http://192.168.31.110:3000/useing/master", "moee", "ott")
+                ajax("http://192.168.31.110:3000/guid/new", "moee", "ott")
             </script>
             <script id="moee" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
-                <img src="{{$value.img}}">
-                <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
-            </li>
+                <li class="lise">
+                    <img src="{{$value.img}}">
+                    <p class="out_one">{{$value.text}}</p>
+                    <span class="fa fa-comment-o">{{$value.like}}</span>
+                    <span class="fa fa-heart-o">{{$value.words}}</span>
+                </li>
             {{/each}}
         </ul>
     </script>
@@ -151,22 +146,22 @@
             <div id="otq"></div>
             <script src="./js/template-web.js"></script>
             <script>
-                ajax("http://192.168.31.110:3000/useing/master", "moew", "otq")
+                ajax("http://192.168.31.110:3000/guid/new", "moew", "otq")
             </script>
             <script id="moew" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lise">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
+                <span class="fa fa-comment-o">{{$value.words}}</span>
+                <span class="fa fa-heart-o">{{$value.like}}</span>
             </li>
             {{/each}}
         </ul>
         </div>
         </script>
+            <div id="more"><span class="fa fa-angle-down"></span><span class="fa fa-spinner"></span> 加载更多</div>
             <!-- 底部 -->
             <footer class="stern">
                 <img src="./img/image/code.png" alt="">
@@ -213,7 +208,10 @@
                 <div class="buttom">© 2022 极果版权所有</div>
             </footer>
 
+
             <button onclick="topFunction()" id="myBtn" title="回顶部"><img src="./img/icon/back.png" alt=""></button>
+
+
 </body>
 
 </html>
