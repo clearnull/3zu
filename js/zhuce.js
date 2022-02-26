@@ -18,33 +18,42 @@ window.onload = function () {
         }, 1000)
     }
     //验证手机号
-    var user_ = document.getElementById('phone')
-    var sp_ = document.getElementsByTagName('span')
-    user_.onblur = function () {
-        var us_ = user_.value.trim()
-        if (us_.length == 0) {
-            sp_[0].style.display = 'inline-block'
-            sp_[0].innerHTML = '手机号不能为空！'
-        } else {
-            sp_[0].innerHTML = ''
-            user_.style.border = 'green solid 1px'
+    var phone_ = document.getElementById('phone')//手机号
+    var imgCode_ = document.getElementById('imgCode')//图片验证码
+    var num_ = document.getElementById('num')//验证码
+    var user_ = document.getElementById('userName')//用户名
+    var psd_ = document.getElementById('psw1')//密码
+    var pasd_ = document.getElementById('psw2')//确认密码
+    var ss = document.getElementsByClassName('register-div')[0]
+    var sp = ss.querySelectorAll('span')
+    var btn_ = document.getElementById('promptlyRegister')//注册
+    var res_pho = /^1[3578]\d{9}$/
+    var res_num = /^\w{6,10}$/
+    btn_.onclick = function () {
+        for (var i = 0; i < sp.length; i++) {
+            sp[i].innerHTML = '';
+        }
+        if (!res_pho.test(phone_.value)) {
+            sp[0].innerHTML = '*请输入正确手机号!'
+        } else if (imgCode_.value != 'r2B7') {
+            sp[1].innerHTML = '*验证码错误!'
+        } else if (!res_num.test(user_.value)) {
+            sp[3].innerHTML = '*用户名输入不合法!'
+        } else if (!res_num.test(psd_.value)) {
+            sp[4].innerHTML = '*密码输入不合法!'
+        } else if (psd_.value != pasd_.value) {
+            sp[5].innerHTML = '*两次密码不一致!'
         }
     }
-    user_.onfocus = function () {
-        user_.style.border = 'red solid 1px'
-    }
-    var ph_ = document.getElementById('userName')
-    ph_.onblur = function () {
-        var us_ = ph_.value.trim()
-        if (us_.length == 0) {
-            sp_[1].style.display = 'inline-block'
-            sp_[1].innerHTML = '用户名不能为空！'
-        } else {
-            sp_[1].innerHTML = ''
-            ph_.style.border = 'green solid 1px'
-        }
-    }
-    ph_.onfocus = function () {
-        ph_.style.border = 'red solid 1px'
-    }
+
 }
+$(function () {
+    //登录
+    $('#jsone').on('click', function () {
+        console.log(1);
+        $('#denglujs').css('display', 'block')
+    })
+    $('#quxiao').on('click', function () {
+        $('#denglujs').css('display', 'none')
+    })
+})
