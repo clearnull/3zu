@@ -120,12 +120,13 @@
 
 .details .xinxiang .zan p {
   font-size: 12px;
-  text-indent: 38px;
+  /* text-indent: 38px; */
   color: #8f8d8d;
+  margin-left: 30px;
 }
 .details .xinxiang .zan .ppp_ {
-  margin-top: 6px;
-  margin-left:-78px;
+  margin-top: 2px;
+  margin-left:-30px;
   text-align: center;
 }
 .details .xinxiang .zan .ppp_ img:hover{

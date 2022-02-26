@@ -7,9 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/导购详情.css">
+    <link rel="stylesheet" href="./css/登录.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <script src="./js/back.js"></script>
+    <script src="./js/denglu.js"></script>
 </head>
 <body>
      <!-- 页面部分 -->
+     <header>
      <div>
         <!-- title -->
         <!-- logo -->
@@ -33,6 +38,34 @@
                 <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
             </ul>
         </div>
+
+        <div id="denglujs">
+            <div class="one">
+                      <div class="two">
+                          <p class="jiguoone">极果账号登录</p>
+                         
+                    <input type="text" class="jiguotwo" placeholder="手机号"><br>
+                <input type="password" class="jiguotwo" placeholder="密码"><br>
+                <p class="jiguo_"><input type="checkbox" class="jiguofour" >下次自动登录
+                <button class="juguothree">登录</button></p>
+                <p  class="jiguofive"> <span>注册新账号</span> 
+                   <span class="spantwo">忘记密码?</span></p>
+               
+
+                         
+                      </div>
+                      <div class="three">
+                          <p class="shejiao">社交网络账号登录</p>
+                          <p class="shejiaoone"><img src="./img/icon/微信.png" alt=""></p>
+                          <span><img src="./img/icon/取消.png" alt="" id="quxiao" onclick="ft()"></span>
+                          <ul >
+                              <li class="weibo"><img src="./img/icon/微博.png" alt="">微博</li>
+                              <li class="shouji"><img src="./img/icon/qq.png" alt="">QQ</li>
+                          </ul>
+                      </div>
+            </div>
+      </div>
+        </header>
 
         <!-- 主体 -->
        
@@ -101,8 +134,10 @@
               </div>
               <div class="zan">
                 <p class="ppp_"><img src="./img/icon/share_yj1.png" alt=""></p>
-                <p>分享</p>
+                <p><a class="bshareDiv" href="http://www.bshare.cn/share"></a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=10&amp;bgcolor=Green&amp;ssc=false"></script></p>
               </div>
+
+
     
     
             </div>
@@ -157,6 +192,12 @@
         </ul>
         <div class="buttom">© 2022 极果版权所有</div>
     </footer>
+    <button onclick="topFunction()" id="myBtn" title="回顶部"><img src="./img/icon/back.png" alt=""></button>
 
+
+    
 </body>
+
 </html>
+
+
