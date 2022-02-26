@@ -2,15 +2,15 @@
 #denglujs{
     width: 705px;
     height:335px;
+    margin:0 auto;
     border-radius: 12px;
     background-color: rgb(255,255,255);
-    position: absolute;
-    top: 127px;
-    left: 256px;
-    z-index: 2;
+    z-index: 99;
     display: none;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
 .two{
     width: 450px;
     height: 300px;

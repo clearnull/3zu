@@ -80,8 +80,8 @@
 }
 #ot>ul>li,#ott>ul>li,#otq>ul>li{
     float: left;
-    height: 220px;
-    margin:10px 24px;
+    height: 222px;
+    margin:10px 22px;
     overflow: hidden;
     width: 200px;
     font-size: 13px;
@@ -146,4 +146,37 @@ i{
     right: 0px;
     padding:2px 0;
     border-radius: 0 0px 0 6px;
+}
+#ot>.ul_{
+    overflow: hidden;
+}
+.bborder2{
+    border-bottom: 2px solid #E5E7E6;
+    border-radius:0px 0px 8px 8px;
+    height: 240px;
+    width: 200px;
+    position: absolute;
+    bottom: 5px;
+}
+.bborder1{
+    border-bottom: 3px solid #E5E7E6;
+    border-radius:0px 0px 12px 12px;
+    height: 240px;
+    width: 160px;
+    position: absolute;
+    bottom: -1px;
+    left: 17px;
+    z-index: 5;
+    }
+.bborder3{
+    border-radius:0px 0px 12px 12px;
+    border-bottom: 3px solid #E5E7E6;
+    height: 240px;
+    width: 130px;
+    position: absolute;
+    bottom: -8px;
+    left: 35px;
+}
+#quk{
+    border:0;
 }

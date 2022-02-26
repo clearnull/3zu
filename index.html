@@ -172,11 +172,14 @@
         <script id="moee" type="text/html">
         <ul class="ul_">
             {{each value}}
-                <li class="lise">
+                <li class="lise" id="quk">
                     <img src="{{$value.img}}">
                     <p class="out_one">{{$value.text}}</p>
                     <span class="fa fa-comment-o">{{$value.like}}</span>
                     <span class="fa fa-heart-o">{{$value.words}}</span>
+                    <div class="bborder1"></div>
+                    <div class="bborder2"></div>
+                    <div class="bborder3"></div>
                 </li>
             {{/each}}
         </ul>
@@ -219,6 +222,8 @@
 
         <div class="gengduo"><span class="fa fa-angle-down"></span>加载更多</div>
         <!-- 底部 -->
+        <div class="dibu">
+
         <footer class="stern">
             <img src="./img/image/code.png" alt="">
             <ul>
@@ -263,6 +268,7 @@
             </ul>
             <div class="buttom">© 2022 极果版权所有</div>
         </footer>
+        </div>
 
 
 
@@ -272,17 +278,3 @@
 </body>
 
 </html>
-
-
-<!-- <script>
-
-    var deng = document.getElementById('denglujs');
-    console.log(deng);
-    function ft() {
-        deng.style.display = 'none';
-
-    }
-    function fn() {
-        deng.style.display = 'block';
-    }
-</script> -->

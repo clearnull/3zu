@@ -6,6 +6,9 @@
     font-family: "黑体";
     user-select: none;
 }
+header{
+    position: relative;
+}
 a{
     color:#000;
 }
@@ -60,11 +63,14 @@ a{
 }
 
 /* 底部 */
+.dibu{
+    width: 100%;
+    background-color: #505050;
+}
 .stern{
     width: 1250px;
     height: 300px;
     margin: 0 auto;
-    background-color: #505050;
     padding-top: 30px;
     position: relative;
     font-family: "黑体";
