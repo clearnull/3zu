@@ -13,6 +13,8 @@
     <script src="./js/jquery-3.6.min.js"></script>
     <link rel="stylesheet" href="./css/inde.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./js/lunbo.js"></script>
+    <script src="./js/more.js"></script>
     <script src="./js/index.js"></script>
     <!-- <script src="./js/swiper-bundle.min.js"></script> -->
 </head>
@@ -27,11 +29,11 @@
             <img src="./img/image/logonew.png" alt="">
             <!-- 标题左边 -->
             <ul class="page">
-                <li><a href="">首页</a></li>
-                <li><a href="./play.html">酷玩</a></li>
-                <li><a href="./导购.html">导购</a></li>
-                <li><a href="./">试用</a></li>
-                <li><a href="./report.html">报告</a></li>
+                <li>首页</li>
+                <li>酷玩</li>
+                <li>导购</li>
+                <li>试用</li>
+                <li>报告</li>
             </ul>
             <!-- 标题右边 -->
             <ul class="seek">
@@ -60,12 +62,7 @@
         <div class="tr">
             <div class="try">热门试用</div>
         </div>
-
-        <div id="fat">
-            <div id="out"></div>
-
         <div class="fe">
-
             <span class="left"><</span>
                     <span class="right">></span>
                     <div id="fat">
@@ -79,18 +76,17 @@
         <script id="mo" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lis" id="lis">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
                 <span>{{$value.totalnum}}</span>
                 <span>{{$value.num}}台</span>
-                <p>{{$value.apply}}<span>申请</span></p>
+                <p>{{$value.apply}}<i>申请</i></p>
                 <p>剩余时间2天</p>
             </li>
             {{/each}}
         </ul>
         </script>
-
         <!-- 报告精选 -->
         <div class="user">
             <div class="tr">
@@ -105,12 +101,11 @@
             <script id="moe" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lise">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
+                <span class="fa fa-comment-o">{{$value.words}}</span>
+                <span class="fa fa-thumbs-o-up">{{$value.like}}</span>
             </li>
             {{/each}}
         </ul>
@@ -130,12 +125,12 @@
             <script id="moee" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
-                <img src="{{$value.img}}">
-                <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
-            </li>
+                <li class="lise">
+                    <img src="{{$value.img}}">
+                    <p class="out_one">{{$value.text}}</p>
+                    <span class="fa fa-comment-o">{{$value.like}}</span>
+                    <span class="fa fa-heart-o">{{$value.words}}</span>
+                </li>
             {{/each}}
         </ul>
     </script>
@@ -154,17 +149,17 @@
             <script id="moew" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis">
+            <li class="lise">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.like}}</span>
-                <span>{{$value.words}}</span>
+                <span class="fa fa-comment-o">{{$value.words}}</span>
+                <span class="fa fa-heart-o">{{$value.like}}</span>
             </li>
             {{/each}}
         </ul>
         </div>
         </script>
+            <div id="more"><span class="fa fa-angle-down"></span><span class="fa fa-spinner"></span> 加载更多</div>
             <!-- 底部 -->
             <footer class="stern">
                 <img src="./img/image/code.png" alt="">
@@ -210,8 +205,6 @@
                 </ul>
                 <div class="buttom">© 2022 极果版权所有</div>
             </footer>
-
-
 </body>
 
 </html>

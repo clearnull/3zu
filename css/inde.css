@@ -20,7 +20,7 @@
 .out_one{
     height: 35px;
 }
-#out>ul>li>span{
+#out>ul>li span{
     display: inline-block;
     border:solid 1px #F75F4D;
     border-radius: 5px;
@@ -29,10 +29,10 @@
     font-size: 12px;
     margin:3px 0;
 }
-#out>ul>li>p:nth-child(5){
+#out>ul>li p:nth-child(5){
     color:#F75F4D;
 }
-#out>ul>li>p:nth-child(6){
+#out>ul>li p:nth-child(6){
     color:#F75F4D;
 }
 #out>ul>li>p>span{
@@ -61,12 +61,12 @@
     margin:0 auto;
 }
 #otq{
-    height:650px;
+    height:730px;
 }
 #ot>ul>li,#ott>ul>li,#otq>ul>li{
     float: left;
     height: 220px;
-    margin:0 25px;
+    margin:10px 24px;
     overflow: hidden;
     width: 200px;
     font-size: 13px;
@@ -83,7 +83,7 @@
 }
 .use{
     width: 100%;
-    height: 215px;
+    height: 300px;
     overflow: hidden;
     padding:10px 0;
     background:#ffffff;
@@ -92,4 +92,37 @@
     padding:20px 0;
     float:right;
     color:#F75F4D;
+}
+.lise{
+    border:1px solid rgb(192, 190, 190);
+    border-radius: 5px;
+    margin:20px 0;
+    position:relative;
+    z-index: 7;
+}
+.lise span{
+    float: right;
+    margin-right: 10px;
+    color:rgb(128, 128, 128);
+}
+.lise span:nth-child(4){
+    margin-right: 10px;
+}
+#lis{
+    border:none;
+}
+i{
+    color:#000;
+}
+#more{
+    width: 100px;
+    margin:0 auto;
+    position:relative;
+}
+#more span{
+    position:absolute;
+    left:-10px;
+}
+.fa-spinner{
+    display: none;
 }

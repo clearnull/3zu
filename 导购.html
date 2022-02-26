@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/导购.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/template-web.js"></script>
@@ -54,7 +57,7 @@
             <div id="out"></div>
         </div>
         <script>
-            ajax("http://192.168.31.110:3000/report/hot", "mo", "out")
+            ajax("http://192.168.31.110:3000/guid/new", "mo", "out")
         </script>
         <script id="mo" type="text/html">
         <ul class="uls">
@@ -64,8 +67,8 @@
                     <img src="{{$value.img}}" alt="">
                     <p>{{$value.text}}</p>
                     <p>
-                        <span class="zan">{{$value.num}}</span>
-                        <span class="look">{{$value.apply}}</span>
+                        <span class="zan  fa fa-comment-o">{{$value.like}}</span>
+                        <span class="look fa fa-thumbs-o-up">{{$value.words}}</span>
                     </p>
                 </a>
             </li>

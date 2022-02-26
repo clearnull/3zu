@@ -22,17 +22,21 @@
     background:rgb(235, 233, 233);
 }
 #out ul{
-    width: 1250px;
+    width: 1000px;
+    height: 1250px;
+    overflow: hidden;
     margin:0 auto;
 }
 #out li{
-    width: 300px;
-    height: 220px;
-    margin:20px 50px;
+    width: 200px;
+    height: 210px;
+    margin:20px 25px;
     float:left;
+    font-size: 15px;
 }
 #out img{
-    width: 300px;
+    width: 200px;
+    height: 130px;
 }
 #out2{
     width: 100%;
@@ -40,19 +44,41 @@
     background:rgb(235, 233, 233);
 }
 #out2 ul{
-    width: 1250px;
+    width: 1000px;
+    height: 1250px;
+    overflow: hidden;
     margin:0 auto;
 }
 #out2 li{
-    width: 300px;
-    height: 220px;
-    margin:20px 50px;
+    width: 200px;
+    height: 210px;
+    margin:20px 25px;
     float:left;
+    font-size: 15px;
 }
 #out2 img{
-    width: 300px;
+    width: 200px;
+    height: 130px;
 }
 .find_p>ul>.change{
     color:#FA5431;
     border-bottom:#FA5431 solid;
+}
+.uls{
+    margin-right: 10px;
+    color:rgb(128, 128, 128);
+    overflow: hidden;
+}
+.uls span:nth-child(5),.uls span:nth-child(4){
+    float: right;
+    margin-right: 10px;
+}
+.uls span:nth-child(3){
+    color:#FA5431;
+}
+.uls p{
+    margin-bottom: 10px;
+}
+.uls li{
+    background:#fff;
 }

@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/play.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/template-web.js"></script>
     <script src="./js/jquery-3.6.min.js"></script>
-    <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/playpin.css">
+    <script src="./js/play.js"></script>
 </head>
 
 <body>
@@ -58,14 +62,50 @@
             ajax("http://192.168.31.110:3000/play/new", "mo", "out")
         </script>
         <script id="mo" type="text/html">
-            <ul>
+            <ul class="uls">
                 {{each value}}
                     <li>
                         <img src="{{$value[1].img}}" alt="">
                         <p>{{$value[1].text}}</p>
                         <span>{{$value[1].price}}</span>
-                        <span>{{$value[1].like}}</span>
-                        <span>{{$value[1].words}}</span>
+                        <span class="fa fa-comment-o">{{$value[1].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[1].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[2].img}}" alt="">
+                        <p>{{$value[2].text}}</p>
+                        <span>{{$value[2].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[2].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[2].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[3].img}}" alt="">
+                        <p>{{$value[3].text}}</p>
+                        <span>{{$value[3].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[3].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[3].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[4].img}}" alt="">
+                        <p>{{$value[4].text}}</p>
+                        <span>{{$value[4].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[4].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[4].words}}</span>
+                    </li>
+                {{/each}}
+                {{each value}}
+                    <li>
+                        <img src="{{$value[5].img}}" alt="">
+                        <p>{{$value[5].text}}</p>
+                        <span>{{$value[5].price}}</span>
+                        <span class="fa fa-comment-o">{{$value[5].like}}</span>
+                        <span class="fa fa-heart-o">{{$value[5].words}}</span>
                     </li>
                 {{/each}}
             </ul>
@@ -75,21 +115,57 @@
             <div id="out2"></div>
         </div>
         <script>
-            ajax("http://192.168.31.110:3000/play/hot", "mo2", "out2")
+            ajax("http://192.168.31.110:3000/play/new", "mo", "out2")
         </script>
-        <script id="mo2" type="text/html">
-            <ul>
-                {{each value}}
-                    <li>
-                        <img src="{{$value[2].img}}" alt="">
-                        <p>{{$value[2].text}}</p>
-                        <span>{{$value[2].price}}</span>
-                        <span>{{$value[2].like}}</span>
-                        <span>{{$value[2].words}}</span>
-                    </li>
-                {{/each}}
-            </ul>
-        </script>
+        <script id="mo" type="text/html">
+                    <ul class="uls">
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[2].img}}" alt="">
+                            <p>{{$value[2].text}}</p>
+                            <span>{{$value[2].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[2].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[2].words}}</span>
+                        </li>
+                        {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[5].img}}" alt="">
+                            <p>{{$value[5].text}}</p>
+                            <span>{{$value[5].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[5].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[5].words}}</span>
+                        </li>
+                        {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[1].img}}" alt="">
+                            <p>{{$value[1].text}}</p>
+                            <span>{{$value[1].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[1].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[1].words}}</span>
+                        </li>
+                        {{/each}}
+                        {{each value}}
+                            <li>
+                                <img src="{{$value[4].img}}" alt="">
+                                <p>{{$value[4].text}}</p>
+                                <span>{{$value[4].price}}</span>
+                                <span class="fa fa-comment-o">{{$value[4].like}}</span>
+                                <span class="fa fa-heart-o">{{$value[4].words}}</span>
+                            </li>
+                        {{/each}}
+                        {{each value}}
+                        <li>
+                            <img src="{{$value[3].img}}" alt="">
+                            <p>{{$value[3].text}}</p>
+                            <span>{{$value[3].price}}</span>
+                            <span class="fa fa-comment-o">{{$value[3].like}}</span>
+                            <span class="fa fa-heart-o">{{$value[3].words}}</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </script>
         <!-- 品类 -->
         <div class="all" style="display: none;">
             <div class="out3">
