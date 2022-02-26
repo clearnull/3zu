@@ -29,15 +29,13 @@ window.onload = function () {
     var btn_ = document.getElementById('promptlyRegister')//注册
     var res_pho = /^1[3578]\d{9}$/
     var res_num = /^\w{6,10}$/
+    var res_user = /^[a-zA-Z0-9_-]{4,16}$/
     btn_.onclick = function () {
-        for (var i = 0; i < sp.length; i++) {
-            sp[i].innerHTML = '';
-        }
         if (!res_pho.test(phone_.value)) {
             sp[0].innerHTML = '*请输入正确手机号!'
         } else if (imgCode_.value != 'r2B7') {
             sp[1].innerHTML = '*验证码错误!'
-        } else if (!res_num.test(user_.value)) {
+        } else if (!res_user.test(user_.value)) {
             sp[3].innerHTML = '*用户名输入不合法!'
         } else if (!res_num.test(psd_.value)) {
             sp[4].innerHTML = '*密码输入不合法!'
