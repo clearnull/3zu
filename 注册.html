@@ -7,36 +7,63 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/注册.css">
+    <link rel="stylesheet" href="./css/登录.css">
 </head>
 <body>
      <!-- 页面部分 -->
-     <div>
-        <!-- title -->
-        <!-- logo -->
-        <div class="head">
-            <img src="./img/image/logonew.png" alt="">
-            <!-- 标题左边 -->
-            <ul class="page">
-                <li><a href="./index.html">首页</a></li>
-                <li><a href="./play.html">酷玩</a></li>
-                <li><a href="./导购.html">导购</a></li>
-                <li><a href="./try.html">试用</a></li>
-                <li><a href="./report.html">报告</a></li>
-            </ul>
-            <!-- 标题右边 -->
-            <ul class="seek">
-                <li>
-                    <img src="./img/icon/search.png" alt="">
-                </li>
-                <button>
-                    注册
-                </button>
-                <button>
-                    登录
-                </button>
-            </ul>
-        </div>
-
+     <header>
+        <div>
+           <!-- title -->
+           <!-- logo -->
+           <div class="head">
+               <img src="./img/image/logonew.png" alt="">
+               <!-- 标题左边 -->
+               <ul class="page">
+                   <li><a href="./index.html">首页</a></li>
+                   <li><a href="./play.html">酷玩</a></li>
+                   <li><a href="./导购.html">导购</a></li>
+                   <li><a href="./try.html">试用</a></li>
+                   <li><a href="./report.html">报告</a></li>
+               </ul>
+               <!-- 标题右边 -->
+               <ul class="seek">
+                   <li>
+                       <img src="./img/icon/search.png" alt="">
+                   </li>
+   
+                   <a href="./注册.html"><button>注册</button></a>
+                   <a href="" id="jsone" onclick="fn()"><button>登录</button></a>
+               </ul>
+           </div>
+   
+           <div id="denglujs">
+               <div class="one">
+                         <div class="two">
+                             <p class="jiguoone">极果账号登录</p>
+                            
+                       <input type="text" class="jiguotwo" placeholder="手机号"><br>
+                   <input type="password" class="jiguotwo" placeholder="密码"><br>
+                   <p class="jiguo_"><input type="checkbox" class="jiguofour" >下次自动登录
+                   <button class="juguothree">登录</button></p>
+                   <p  class="jiguofive"> <span>注册新账号</span> 
+                      <span class="spantwo">忘记密码?</span></p>
+                  
+   
+                            
+                         </div>
+                         <div class="three">
+                             <p class="shejiao">社交网络账号登录</p>
+                             <p class="shejiaoone"><img src="./img/icon/微信.png" alt=""></p>
+                             <span><img src="./img/icon/取消.png" alt="" id="quxiao" onclick="ft()"></span>
+                             <ul >
+                                 <li class="weibo"><img src="./img/icon/微博.png" alt="">微博</li>
+                                 <li class="shouji"><img src="./img/icon/qq.png" alt="">QQ</li>
+                             </ul>
+                         </div>
+               </div>
+         </div>
+           </header>
+   
         <div class="register-div">
             <div class="register-box">
                 <div class="register-conter">&nbsp;&nbsp;&nbsp;注册极果</div>
@@ -112,5 +139,20 @@
 </body>
 </html>
 
+
+
+<script>
+    
+    var deng= document.getElementById('denglujs');
+    console.log(deng);
+    function ft(){
+        deng.style.display='none';
+    
+    }
+    function fn(){
+      deng.style.display='block';
+    }
+   </script>
+   
 
    
