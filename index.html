@@ -11,13 +11,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-3.6.min.js"></script>
-    <link rel="stylesheet" href="./css/inde.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="./js/lunbo.js"></script>
     <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/back.css">
     <link rel="stylesheet" href="./css/登录.css">
     <script src="./js/back.js"></script>
+    <link rel="stylesheet" href="./css/inde.css">
 </head>
 
 
@@ -91,26 +91,45 @@
         <div class="try">热门试用</div>
     </div>
     <div class="fe">
-        <span class="left"><</span>
-                <span class="right">></span>
-                <div id="fat">
-                    <div id="out"></div>
-                </div>
+        <span class="left fa fa-angle-left"></span>
+        <span class="right fa fa-angle-right"></span>
+        <div id="fat">
+            <div id="out"></div>
+        </div>
     </div>
     <script src="./js/template-web.js"></script>
     <script>
-        ajax("http://192.168.31.110:3000/useing/public", "mo", "out")
+        ajax("http://192.168.31.110:3000/report/new", "mo", "out")
     </script>
     <script id="mo" type="text/html">
         <ul class="ul_">
             {{each value}}
-            <li class="lis" id="lis">
+            <li class="lis">
                 <img src="{{$value.img}}">
                 <p class="out_one">{{$value.text}}</p>
-                <span>{{$value.totalnum}}</span>
-                <span>{{$value.num}}台</span>
-                <p>{{$value.apply}}<i>申请</i></p>
-                <p>剩余时间2天</p>
+                <!-- 申请中 -->
+                {{if $value.endTime}}
+                <span class="orcolor bcolor">{{$value.totalnum}}</span>
+                <span class="orcolor bcolor">{{$value.num}}台</span>
+                <p class="orcolor">{{$value.apply}}<span class="black">申请</span></p>
+                <p class="orcolor">剩余时间2天</p>
+                <!-- <p class="kuai">{{$value.info_ty}}</p> -->
+                <!-- 已结束 -->
+                {{else if $value.report}}
+                <span class="hcolor hbcolor">{{$value.totalnum}}</span>
+                <span class="hcolor hbcolor">{{$value.num}}台</span>
+                <p class="orcolor">{{$value.apply}}<span class="black">申请</span></p>
+                <p class="hcolor">报告数量:8</p>
+                <!-- <div class="kuai">{{$value.info_ty}}</div> -->
+                <!-- 试用中 -->
+                {{else if $value.uName}}
+                <span class="gcolor gbcolor">{{$value.totalnum}}</span>
+                <span class="gcolor gbcolor">{{$value.num}}台</span>
+                <p class="gcolor">{{$value.apply}}<span class="black">申请</span></p>
+                <p class="gcolor">查看试用名单</p>
+                {{else $value.info_ty}}
+                <div class="kuai">{{$value.info_ty}}</div>
+                {{/if}}
             </li>
             {{/each}}
         </ul>
@@ -163,25 +182,25 @@
         </ul>
     </script>
     </div>
-    
 
-        <!-- 发现酷玩 -->
-        <div class="user">
-            <div class="tr">
-                <div class="try">发现酷玩</div>
 
-           
-     <div class="try2">查看更多 <span class="fa fa-align-justify"></span></div>
-            
-            
+    <!-- 发现酷玩 -->
+    <div class="user">
+        <div class="tr">
+            <div class="try">发现酷玩</div>
+
+
+            <div class="try2">查看更多 <span class="fa fa-align-justify"></span></div>
+
+
         </div>
-            <div id="otq"></div>
-            <script src="./js/template-web.js"></script>
-            <script>
-                ajax("http://192.168.31.110:3000/guid/new", "moew", "otq")
-            </script>
-            <script id="moew" type="text/html">
-       
+        <div id="otq"></div>
+        <script src="./js/template-web.js"></script>
+        <script>
+            ajax("http://192.168.31.110:3000/guid/new", "moew", "otq")
+        </script>
+        <script id="moew" type="text/html">
+
 
         <ul class="ul_">
             {{each value}}
@@ -196,7 +215,7 @@
         </div>
         </script>
 
-           
+
 
         <div class="gengduo"><span class="fa fa-angle-down"></span>加载更多</div>
         <!-- 底部 -->
